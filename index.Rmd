@@ -1,0 +1,31 @@
+---
+title: "Citybike Project"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(plotly)
+library(dplyr)
+citibikes_dataset <-read.csv("https://firebasestorage.googleapis.com/v0/b/citybike-alan-velazquez.appspot.com/o/citibike-tripdata.csv?alt=media&token=f3729fa9-e954-4f12-b961-c08faa53d989")
+```
+
+
+
+Sample
+===
+Column {data-width=1200}
+-----------------------------------------------------------------------
+
+### Data set analysis
+In the next data set sample, you can visualize **100** line items.
+
+```{r}
+df <- citibikes_dataset
+df <- df %>% slice(1:100)
+df
+```
+
